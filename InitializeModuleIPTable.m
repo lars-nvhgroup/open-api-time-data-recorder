@@ -19,39 +19,39 @@ if string(HardwareType) == "Frame"
     for ii = 1:1:NumberOfModules
 
         if ii == 1
-            ModuleIPTableData(ii,:) = {ii 'Command' []};
+            ModuleIPTableData(ii,:) = {ii 'Command' ''};
         else
-            ModuleIPTableData(ii,:) = {ii 'Service' []};
+            ModuleIPTableData(ii,:) = {ii 'Service' ''};
         end
 
     end
 
     ModuleIPTableColumnFormat = ({[] ...
         {'Command' 'Service'} ...
-        []});
+        ''});
     
 elseif string(HardwareType) == "Switch" 
     
     for ii = 1:1:NumberOfModules
 
         if ii == 1
-            ModuleIPTableData(ii,:) = {ii 'Command' []};
+            ModuleIPTableData(ii,:) = {ii 'Command' ''};
         else
-            ModuleIPTableData(ii,:) = {ii 'Service' []};
+            ModuleIPTableData(ii,:) = {ii 'Service' ''};
         end
 
     end
 
     ModuleIPTableColumnFormat = ({[] ...
         {'Command' 'Service'} ...
-        []});
+        ''});
     
 else
     
-    ModuleIPTableData(1,:) = {1 'Stand-alone' []};
+    ModuleIPTableData(1,:) = {1 'Stand-alone' ''};
     ModuleIPTableColumnFormat = ({[] ...
         {'Stand-alone'} ...
-        []});
+        ''});
     
 end
 
